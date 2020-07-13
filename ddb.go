@@ -12,12 +12,12 @@ import (
 	"errors"
 	"strings"
 
+	"github.com/analysic/iri"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
-	"github.com/analysic/iri"
 )
 
 // DB is a service connection handle
@@ -27,8 +27,7 @@ type DB struct {
 	table *string
 }
 
-func newDB(table string) *DB {
-	io := session.Must(session.NewSession())
+func newDB(table string, io *session.Session) *DB {
 	db := dynamodb.New(io)
 	return &DB{io, db, aws.String(table)}
 }
@@ -38,11 +37,11 @@ func (dynamo *DB) Mock(db dynamodbiface.DynamoDBAPI) {
 	dynamo.db = db
 }
 
-//-----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 //
 // Key Value
 //
-//-----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // Get fetches the entity identified by the key.
 func (dynamo DB) Get(entity iri.Thing) (err error) {
@@ -142,11 +141,11 @@ func (dynamo DB) Update(entity iri.Thing) (err error) {
 	return
 }
 
-//-----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 //
 // Pattern Match
 //
-//-----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // dbSeq is an iterator over matched results
 type dbSeq struct {
@@ -220,11 +219,11 @@ func (dynamo DB) Match(key iri.Thing) Seq {
 	return &dbSeq{-1, val.Items, nil}
 }
 
-//-----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 //
 // internal helpers
 //
-//-----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 //
 func marshal(gen map[string]*dynamodb.AttributeValue, err error) (map[string]*dynamodb.AttributeValue, error) {

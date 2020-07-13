@@ -126,6 +126,7 @@ package dynamo
 
 import (
 	"fmt"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"io"
 	"log"
 	"net/url"
@@ -209,7 +210,7 @@ func (e NotFound) Error() string {
 // Supported scheme:
 //   s3:///my-bucket
 //   ddb:///my-table
-func New(uri string) (KeyVal, error) {
+func New(uri string, sess *session.Session) (KeyVal, error) {
 	spec, _ := url.Parse(uri)
 	switch {
 	case spec == nil:
@@ -219,7 +220,7 @@ func New(uri string) (KeyVal, error) {
 	case spec.Scheme == "s3":
 		return newS3(bucket(spec.Path)), nil
 	case spec.Scheme == "ddb":
-		return newDB(bucket(spec.Path)), nil
+		return newDB(bucket(spec.Path), sess), nil
 	default:
 		return nil, fmt.Errorf("Unsupported schema: %s", uri)
 	}

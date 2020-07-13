@@ -2,6 +2,7 @@ package dynamo_test
 
 import (
 	"encoding/json"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"testing"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -86,6 +87,6 @@ func TestUnmarshalDynamo(t *testing.T) {
 
 func TestNew(t *testing.T) {
 	it.Ok(t).
-		If(dynamo.Must(dynamo.New("ddb:///a"))).ShouldNot().Equal(nil).
-		If(dynamo.Must(dynamo.New("s3:///a"))).ShouldNot().Equal(nil)
+		If(dynamo.Must(dynamo.New("ddb:///a", session.Must(session.NewSession())))).ShouldNot().Equal(nil).
+		If(dynamo.Must(dynamo.New("s3:///a", session.Must(session.NewSession())))).ShouldNot().Equal(nil)
 }
