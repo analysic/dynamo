@@ -3,7 +3,7 @@
 //
 // This file may be modified and distributed under the terms
 // of the MIT license.  See the LICENSE file for details.
-// https://github.com/fogfish/dynamo
+// https://github.com/analysic/dynamo
 //
 
 package main
@@ -12,8 +12,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fogfish/dynamo"
-	"github.com/fogfish/iri"
+	"github.com/analysic/dynamo"
+	"github.com/analysic/iri"
 )
 
 type person struct {

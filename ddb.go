@@ -3,7 +3,7 @@
 //
 // This file may be modified and distributed under the terms
 // of the MIT license.  See the LICENSE file for details.
-// https://github.com/fogfish/dynamo
+// https://github.com/analysic/dynamo
 //
 
 package dynamo
@@ -17,7 +17,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
-	"github.com/fogfish/iri"
+	"github.com/analysic/iri"
 )
 
 // DB is a service connection handle

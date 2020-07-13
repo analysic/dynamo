@@ -2,11 +2,11 @@
 
 The library implements a simple key-value abstraction to store algebraic data types at AWS storage services: AWS DynamoDB and AWS S3.
 
-[![Documentation](https://godoc.org/github.com/fogfish/dynamo?status.svg)](http://godoc.org/github.com/fogfish/dynamo)
+[![Documentation](https://godoc.org/github.com/analysic/dynamo?status.svg)](http://godoc.org/github.com/analysic/dynamo)
 [![Build Status](https://secure.travis-ci.org/fogfish/dynamo.svg?branch=master)](http://travis-ci.org/fogfish/dynamo)
 [![Git Hub](https://img.shields.io/github/last-commit/fogfish/dynamo.svg)](http://travis-ci.org/fogfish/dynamo)
 [![Coverage Status](https://coveralls.io/repos/github/fogfish/dynamo/badge.svg?branch=master)](https://coveralls.io/github/fogfish/dynamo?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/fogfish/dynamo)](https://goreportcard.com/report/github.com/fogfish/dynamo)
+[![Go Report Card](https://goreportcard.com/badge/github.com/analysic/dynamo)](https://goreportcard.com/report/github.com/analysic/dynamo)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8a8746f9cbaba81bb44b/maintainability)](https://codeclimate.com/github/fogfish/dynamo/maintainability)
 
 
@@ -51,7 +51,7 @@ Import the library in your code, use URI to specify service and name of the buck
 
 ```go
 import (
-  "github.com/fogfish/dynamo"
+  "github.com/analysic/dynamo"
 )
 
 type Person struct {
@@ -91,7 +91,7 @@ func main() {
 }
 ```
 
-See the [go doc](http://godoc.org/github.com/fogfish/dynamo) for api spec and [advanced example](example) app.
+See the [go doc](http://godoc.org/github.com/analysic/dynamo) for api spec and [advanced example](example) app.
 
 ### Linked data
 
@@ -135,7 +135,7 @@ The build and testing process requires [Go](https://golang.org) version 1.13 or 
 **build** and **test** library.
 
 ```bash
-git clone https://github.com/fogfish/dynamo
+git clone https://github.com/analysic/dynamo
 cd dynamo
 go test
 ```
@@ -146,7 +146,7 @@ The commit message helps us to write a good release note, speed-up review proces
 
 ### bugs
 
-If you experience any issues with the library, please let us know via [GitHub issues](https://github.com/fogfish/dynamo/issue). We appreciate detailed and accurate reports that help us to identity and replicate the issue. 
+If you experience any issues with the library, please let us know via [GitHub issues](https://github.com/analysic/dynamo/issue). We appreciate detailed and accurate reports that help us to identity and replicate the issue. 
 
 ## License
 

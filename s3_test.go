@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
-	"github.com/fogfish/dynamo"
-	"github.com/fogfish/iri"
-	"github.com/fogfish/it"
+	"github.com/analysic/dynamo"
+	"github.com/analysic/iri"
+	"github.com/analysic/it"
 )
 
 func TestS3Get(t *testing.T) {

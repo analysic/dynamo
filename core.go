@@ -3,7 +3,7 @@
 //
 // This file may be modified and distributed under the terms
 // of the MIT license.  See the LICENSE file for details.
-// https://github.com/fogfish/dynamo
+// https://github.com/analysic/dynamo
 //
 
 // Package dynamo implements a simple key-value abstraction to store
@@ -131,7 +131,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/fogfish/iri"
+	"github.com/analysic/iri"
 )
 
 //

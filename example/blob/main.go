@@ -8,8 +8,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/fogfish/dynamo"
-	"github.com/fogfish/iri"
+	"github.com/analysic/dynamo"
+	"github.com/analysic/iri"
 )
 
 func main() {

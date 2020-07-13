@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"github.com/fogfish/dynamo"
-	"github.com/fogfish/iri"
-	"github.com/fogfish/it"
+	"github.com/analysic/dynamo"
+	"github.com/analysic/iri"
+	"github.com/analysic/it"
 )
 
 type Item struct {

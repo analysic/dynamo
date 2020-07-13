@@ -14,7 +14,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
-	"github.com/fogfish/iri"
+	"github.com/analysic/iri"
 )
 
 // S3 is a service connection handle
